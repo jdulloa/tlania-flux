@@ -2,63 +2,144 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Constants\Status;
+use App\Traits\UserNotify;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Str;
-use Laravel\Fortify\TwoFactorAuthenticatable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, TwoFactorAuthenticatable;
+    use HasApiTokens, UserNotify;
 
     /**
-     * The attributes that are mass assignable.
+     * The attributes that should be hidden for arrays.
      *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
+     * @var array
      */
     protected $hidden = [
-        'password',
-        'two_factor_secret',
-        'two_factor_recovery_codes',
-        'remember_token',
+        'password', 'remember_token', 'ver_code', 'balance', 'kyc_data'
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * The attributes that should be cast to native types.
      *
-     * @return array<string, string>
+     * @var array
      */
-    protected function casts(): array
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'kyc_data' => 'object',
+        'ver_code_send_at' => 'datetime'
+    ];
+
+
+    public function loginLogs()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->hasMany(UserLogin::class);
     }
 
-    /**
-     * Get the user's initials
-     */
-    public function initials(): string
+    public function transactions()
     {
-        return Str::of($this->name)
-            ->explode(' ')
-            ->take(2)
-            ->map(fn ($word) => Str::substr($word, 0, 1))
-            ->implode('');
+        return $this->hasMany(Transaction::class)->orderBy('id', 'desc');
+    }
+
+    public function deposits()
+    {
+        return $this->hasMany(Deposit::class)->where('status', '!=', Status::PAYMENT_INITIATE);
+    }
+
+    public function withdrawals()
+    {
+        return $this->hasMany(Withdrawal::class)->where('status', '!=', Status::PAYMENT_INITIATE);
+    }
+
+    public function referrer()
+    {
+        return $this->belongsTo(User::class, 'ref_by');
+    }
+
+    public function referrals()
+    {
+        return $this->hasMany(User::class, 'ref_by');
+    }
+
+    public function activeReferrals()
+    {
+        return $this->hasMany(User::class, 'ref_by');
+    }
+
+    public function allReferrals()
+    {
+        return $this->referrals()->with('referrer');
+    }
+
+    public function tickets()
+    {
+        return $this->hasMany(SupportTicket::class);
+    }
+
+    public function fullname(): Attribute
+    {
+        return new Attribute(
+            get: fn () => trim(($this->firstname ?? '') . ' ' . ($this->lastname ?? '')) ?: __('No Name Provided'),
+        );
+    }
+
+    public function mobileNumber(): Attribute
+    {
+        return new Attribute(
+            get: fn () => $this->dial_code . $this->mobile,
+        );
+    }
+
+    // SCOPES
+    public function scopeActive($query)
+    {
+        return $query->where('status', Status::USER_ACTIVE)->where('ev', Status::VERIFIED)->where('sv', Status::VERIFIED);
+    }
+
+    public function scopeBanned($query)
+    {
+        return $query->where('status', Status::USER_BAN);
+    }
+
+    public function scopeEmailUnverified($query)
+    {
+        return $query->where('ev', Status::UNVERIFIED);
+    }
+
+    public function scopeMobileUnverified($query)
+    {
+        return $query->where('sv', Status::UNVERIFIED);
+    }
+
+    public function scopeKycUnverified($query)
+    {
+        return $query->where('kv', Status::KYC_UNVERIFIED);
+    }
+
+    public function scopeKycPending($query)
+    {
+        return $query->where('kv', Status::KYC_PENDING);
+    }
+
+    public function scopeEmailVerified($query)
+    {
+        return $query->where('ev', Status::VERIFIED);
+    }
+
+    public function scopeMobileVerified($query)
+    {
+        return $query->where('sv', Status::VERIFIED);
+    }
+
+    public function scopeWithBalance($query)
+    {
+        return $query->where('balance', '>', 0);
+    }
+
+    public function deviceTokens()
+    {
+        return $this->hasMany(DeviceToken::class);
     }
 }
