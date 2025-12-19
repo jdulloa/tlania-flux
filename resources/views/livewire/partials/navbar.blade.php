@@ -1,20 +1,5 @@
-<?php
-
-use Livewire\Volt\Component;
-use Illuminate\Support\Facades\Auth;
-
-new class extends Component {
-    public function logout()
-    {
-        Auth::guard('web')->logout();
-        session()->invalidate();
-        session()->regenerateToken();
-        $this->redirect('/', navigate: true);
-    }
-}; ?>
-
 <flux:header container class="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700 sticky top-0 z-50">
-    <flux:brand href="/" name="{{ config('app.name', 'tlania') }}" class="max-w-[130px]">
+    <flux:brand href="/" name="{{ config('app.name', 'RaffleLab') }}" class="max-w-[130px]">
         </flux:brand>
 
     <flux:spacer />
@@ -22,14 +7,12 @@ new class extends Component {
     <flux:navbar class="hidden lg:flex">
         <flux:navbar.item href="/" :current="request()->routeIs('home')">Home</flux:navbar.item>
         <flux:navbar.item href="/lotteries" :current="request()->routeIs('lotteries*')">Lotteries</flux:navbar.item>
-        <flux:navbar.item href="/results" :current="request()->routeIs('results*')">Results</flux:navbar.item>
         
         <flux:dropdown>
             <flux:navbar.item icon-trailing="chevron-down">Help</flux:navbar.item>
             <flux:navmenu>
                 <flux:navmenu.item href="/faqs">FAQs</flux:navmenu.item>
                 <flux:navmenu.item href="/contact">Contact</flux:navmenu.item>
-                <flux:navmenu.item href="/support">Support Ticket</flux:navmenu.item>
             </flux:navmenu>
         </flux:dropdown>
     </flux:navbar>
@@ -64,11 +47,17 @@ new class extends Component {
                     <flux:navmenu.item href="/dashboard" icon="squares-2x2">Dashboard</flux:navmenu.item>
                     <flux:navmenu.item href="/profile" icon="user">Profile</flux:navmenu.item>
                     <flux:navmenu.separator />
-                    <flux:navmenu.item wire:click="logout" icon="arrow-right-start-on-rectangle" class="text-red-500 hover:text-red-600">Logout</flux:navmenu.item>
+                    
+                    <form method="POST" action="{{ route('logout') }}" class="w-full">
+                        @csrf
+                        <flux:navmenu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full text-red-500 hover:text-red-600">
+                            Logout
+                        </flux:navmenu.item>
+                    </form>
                 </flux:navmenu>
             </flux:dropdown>
         @endauth
 
-        <flux:sidebar.trigger class="lg:hidden" />
+        <flux:sidebar.toggle class="lg:hidden" icon="bars-2" />
     </div>
 </flux:header>

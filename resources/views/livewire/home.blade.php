@@ -1,5 +1,4 @@
-<x-layouts.guest title="Home - tlania">
-    
+<div>
     <div class="py-20 text-center space-y-6">
         <flux:heading size="xl" level="1">
             Superlative Lottery Platform
@@ -48,5 +47,4 @@
             </div>
         </flux:card>
     </div>
-
-</x-layouts.guest>
+</div>
