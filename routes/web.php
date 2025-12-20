@@ -7,6 +7,14 @@ use App\Livewire\Settings\Profile;
 use App\Livewire\Settings\TwoFactor;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
+use Illuminate\Support\Facades\Session;
+
+Route::get('/lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'es'])) {
+        Session::put('locale', $locale);
+    }
+    return back();
+})->name('lang');
 
 Route::get('/', Home::class)->name('home');
 

@@ -41,6 +41,17 @@
             </flux:menu>
         </flux:dropdown>
 
+        <flux:dropdown align="end">
+            <flux:button variant="subtle" icon="language" icon-trailing="chevron-down">
+                {{ strtoupper(app()->getLocale()) }}
+            </flux:button>
+
+            <flux:menu>
+                <flux:menu.item href="{{ route('lang', 'en') }}">🇺🇸 @lang('English')</flux:menu.item>
+                <flux:menu.item href="{{ route('lang', 'es') }}">🇪🇸 @lang('Spanish')</flux:menu.item>
+            </flux:menu>
+        </flux:dropdown>
+
         @guest
             <flux:button href="/login" variant="ghost" class="hidden sm:flex">@lang('Log in')</flux:button>
             <flux:button href="/register" variant="primary">@lang('Sign up')</flux:button>
