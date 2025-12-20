@@ -5,14 +5,14 @@
     <flux:spacer />
 
     <flux:navbar class="hidden lg:flex">
-        <flux:navbar.item href="/" :current="request()->routeIs('home')">Home</flux:navbar.item>
-        <flux:navbar.item href="/lotteries" :current="request()->routeIs('lotteries*')">Lotteries</flux:navbar.item>
+        <flux:navbar.item href="/" :current="request()->routeIs('home')">@lang('Home')</flux:navbar.item>
+        <flux:navbar.item href="/lotteries" :current="request()->routeIs('lotteries*')">@lang('Lotteries')</flux:navbar.item>
         
         <flux:dropdown>
-            <flux:navbar.item icon-trailing="chevron-down">Help</flux:navbar.item>
+            <flux:navbar.item icon-trailing="chevron-down">@lang('Help')</flux:navbar.item>
             <flux:navmenu>
-                <flux:navmenu.item href="/faqs">FAQs</flux:navmenu.item>
-                <flux:navmenu.item href="/contact">Contact</flux:navmenu.item>
+                <flux:navmenu.item href="/faqs">@lang('FAQs')</flux:navmenu.item>
+                <flux:navmenu.item href="/contact">@lang('Contact')</flux:navmenu.item>
             </flux:navmenu>
         </flux:dropdown>
     </flux:navbar>

@@ -3,41 +3,41 @@
         <div class="space-y-4">
             <flux:brand href="/" name="tlania" class="text-2xl" />
             <flux:text class="text-zinc-500 dark:text-zinc-400">
-                The superlative lottery platform for everyone. Fair, transparent, and exciting.
+                {{ __(@$content->data_values->description) }}
             </flux:text>
             <div class="text-sm text-zinc-400">
-                &copy; {{ date('Y') }} {{ config('app.name') }}. <br> All rights reserved.
+                &copy; {{ date('Y') }} {{ config('app.name') }}. <br> @lang('All rights reserved.')
             </div>
         </div>
 
         <div>
-            <flux:heading size="lg" class="mb-4">Quick Links</flux:heading>
+            <flux:heading size="lg" class="mb-4">@lang('Quick Links')</flux:heading>
             <ul class="space-y-2">
-                <li><flux:link href="/" variant="subtle">Home</flux:link></li>
-                <li><flux:link href="/lotteries" variant="subtle">Lotteries</flux:link></li>
-                <li><flux:link href="/blog" variant="subtle">Blog</flux:link></li>
-                <li><flux:link href="/winners" variant="subtle">Latest Winners</flux:link></li>
+                <li><flux:link href="/" variant="subtle">@lang('Home')</flux:link></li>
+                <li><flux:link href="/lotteries" variant="subtle">@lang('Lotteries')</flux:link></li>
+                <li><flux:link href="/blog" variant="subtle">@lang('Blog')</flux:link></li>
+                <li><flux:link href="/winners" variant="subtle">@lang('Latest Winners')</flux:link></li>
             </ul>
         </div>
 
         <div>
-            <flux:heading size="lg" class="mb-4">Help Center</flux:heading>
+            <flux:heading size="lg" class="mb-4">@lang('Help')</flux:heading>
             <ul class="space-y-2">
-                <li><flux:link href="/faqs" variant="subtle">FAQs</flux:link></li>
-                <li><flux:link href="/contact" variant="subtle">Contact Us</flux:link></li>
-                <li><flux:link href="/terms" variant="subtle">Terms of Service</flux:link></li>
-                <li><flux:link href="/privacy" variant="subtle">Privacy Policy</flux:link></li>
+                <li><flux:link href="/faqs" variant="subtle">@lang('FAQs')</flux:link></li>
+                <li><flux:link href="/contact" variant="subtle">@lang('Contact')</flux:link></li>
+                <li><flux:link href="/terms" variant="subtle">@lang('Terms of Service')</flux:link></li>
+                <li><flux:link href="/privacy" variant="subtle">@lang('Privacy Policy')</flux:link></li>
             </ul>
         </div>
 
         <div>
-            <flux:heading size="lg" class="mb-4">Subscribe</flux:heading>
+            <flux:heading size="lg" class="mb-4">@lang('Subscribe')</flux:heading>
             <flux:text class="mb-4 text-sm">
-                Get the latest lottery news and updates sent straight to your inbox.
+                @lang('Get the latest lottery news and updates sent straight to your inbox.')
             </flux:text>
             
-            <form class="space-y-3" onsubmit="event.preventDefault();"> <flux:input placeholder="Email address" icon="envelope" />
-                <flux:button variant="primary" type="submit" class="w-full">Subscribe</flux:button>
+            <form class="space-y-3" onsubmit="event.preventDefault();"> <flux:input placeholder="@lang('Email address')" icon="envelope" />
+                <flux:button variant="primary" type="submit" class="w-full">@lang('Subscribe')</flux:button>
             </form>
         </div>
     </div>
