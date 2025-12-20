@@ -28,6 +28,10 @@
     --color-accent-foreground: var(--color-lime-900);
 }
 
+@theme {
+    --font-sans: Inter, sans-serif;
+}
+
 @layer theme {
     .dark {
         --color-accent: var(--color-lime-400);
