@@ -7,12 +7,18 @@
     <flux:navbar class="hidden lg:flex">
         <flux:navbar.item href="/" :current="request()->routeIs('home')">@lang('Home')</flux:navbar.item>
         <flux:navbar.item href="/lotteries" :current="request()->routeIs('lotteries*')">@lang('Lotteries')</flux:navbar.item>
+        <flux:navbar.item href="/results" :current="request()->routeIs('results*')">@lang('Results')</flux:navbar.item>
+        <flux:navbar.item href="/blog" :current="request()->routeIs('blog*')">@lang('Blog')</flux:navbar.item>
         
         <flux:dropdown>
             <flux:navbar.item icon-trailing="chevron-down">@lang('Help')</flux:navbar.item>
             <flux:navmenu>
                 <flux:navmenu.item href="/faqs">@lang('FAQs')</flux:navmenu.item>
-                <flux:navmenu.item href="/contact">@lang('Contact')</flux:navmenu.item>
+                @auth
+                    <flux:navmenu.item href="/support">@lang('Support Ticket')</flux:navmenu.item>
+                    @else
+                    <flux:navmenu.item href="/contact">@lang('Contact')</flux:navmenu.item>
+                @endauth
             </flux:navmenu>
         </flux:dropdown>
     </flux:navbar>
@@ -29,15 +35,15 @@
             </flux:button>
 
             <flux:menu>
-                <flux:menu.item icon="sun" x-on:click="$flux.appearance = 'light'">Light</flux:menu.item>
-                <flux:menu.item icon="moon" x-on:click="$flux.appearance = 'dark'">Dark</flux:menu.item>
-                <flux:menu.item icon="computer-desktop" x-on:click="$flux.appearance = 'system'">System</flux:menu.item>
+                <flux:menu.item icon="sun" x-on:click="$flux.appearance = 'light'">@lang('Light')</flux:menu.item>
+                <flux:menu.item icon="moon" x-on:click="$flux.appearance = 'dark'">@lang('Dark')</flux:menu.item>
+                <flux:menu.item icon="computer-desktop" x-on:click="$flux.appearance = 'system'">@lang('System')</flux:menu.item>
             </flux:menu>
         </flux:dropdown>
 
         @guest
-            <flux:button href="/login" variant="ghost" class="hidden sm:flex">Log in</flux:button>
-            <flux:button href="/register" variant="primary">Sign up</flux:button>
+            <flux:button href="/login" variant="ghost" class="hidden sm:flex">@lang('Log in')</flux:button>
+            <flux:button href="/register" variant="primary">@lang('Sign up')</flux:button>
         @endguest
 
         @auth
@@ -48,14 +54,14 @@
                 </flux:button>
 
                 <flux:navmenu>
-                    <flux:navmenu.item href="/dashboard" icon="squares-2x2">Dashboard</flux:navmenu.item>
-                    <flux:navmenu.item href="/profile" icon="user">Profile</flux:navmenu.item>
+                    <flux:navmenu.item href="/dashboard" icon="squares-2x2">@lang('Dashboard')</flux:navmenu.item>
+                    <flux:navmenu.item href="/profile" icon="user">@lang('Profile')</flux:navmenu.item>
                     <flux:navmenu.separator />
                     
                     <form method="POST" action="{{ route('logout') }}" class="w-full">
                         @csrf
                         <flux:navmenu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full text-red-500 hover:text-red-600">
-                            Logout
+                            @lang('Logout')
                         </flux:navmenu.item>
                     </form>
                 </flux:navmenu>

@@ -15,8 +15,8 @@
             <ul class="space-y-2">
                 <li><flux:link href="/" variant="subtle">@lang('Home')</flux:link></li>
                 <li><flux:link href="/lotteries" variant="subtle">@lang('Lotteries')</flux:link></li>
-                <li><flux:link href="/blog" variant="subtle">@lang('Blog')</flux:link></li>
                 <li><flux:link href="/winners" variant="subtle">@lang('Latest Winners')</flux:link></li>
+                <li><flux:link href="/blog" variant="subtle">@lang('Blog')</flux:link></li>
             </ul>
         </div>
 
@@ -36,7 +36,7 @@
                 @lang('Get the latest lottery news and updates sent straight to your inbox.')
             </flux:text>
             
-            <form class="space-y-3" onsubmit="event.preventDefault();"> <flux:input placeholder="@lang('Email address')" icon="envelope" />
+            <form class="space-y-3" onsubmit="event.preventDefault();"> <flux:input placeholder="{{ __('Email address') }}" icon="envelope" />
                 <flux:button variant="primary" type="submit" class="w-full">@lang('Subscribe')</flux:button>
             </form>
         </div>
