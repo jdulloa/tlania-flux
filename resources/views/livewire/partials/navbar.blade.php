@@ -7,7 +7,7 @@
     <flux:navbar class="hidden lg:flex">
         <flux:navbar.item href="/" :current="request()->routeIs('home')">@lang('Home')</flux:navbar.item>
         <flux:navbar.item href="/lotteries" :current="request()->routeIs('lotteries*')">@lang('Lotteries')</flux:navbar.item>
-        <flux:navbar.item href="/results" :current="request()->routeIs('results*')">@lang('Results')</flux:navbar.item>
+        <flux:navbar.item href="/winners" :current="request()->routeIs('winners*')">@lang('Winners')</flux:navbar.item>
         <flux:navbar.item href="/blog" :current="request()->routeIs('blog*')">@lang('Blog')</flux:navbar.item>
         
         <flux:dropdown>

@@ -15,7 +15,7 @@
             <ul class="space-y-2">
                 <li><flux:link href="/" variant="subtle">@lang('Home')</flux:link></li>
                 <li><flux:link href="/lotteries" variant="subtle">@lang('Lotteries')</flux:link></li>
-                <li><flux:link href="/winners" variant="subtle">@lang('Latest Winners')</flux:link></li>
+                <li><flux:link href="/winners" variant="subtle">@lang('Winners')</flux:link></li>
                 <li><flux:link href="/blog" variant="subtle">@lang('Blog')</flux:link></li>
             </ul>
         </div>
@@ -25,7 +25,10 @@
             <ul class="space-y-2">
                 <li><flux:link href="/faqs" variant="subtle">@lang('FAQs')</flux:link></li>
                 <li><flux:link href="/contact" variant="subtle">@lang('Contact')</flux:link></li>
-                <li><flux:link href="/terms" variant="subtle">@lang('Terms of Service')</flux:link></li>
+            </ul>
+            <flux:heading size="lg" class="mt-6 mb-4">@lang('Legal')</flux:heading>
+            <ul class="space-y-2 mt-4">
+                <li><flux:link href="/terms" variant="subtle">@lang('Terms & Conditions')</flux:link></li>
                 <li><flux:link href="/privacy" variant="subtle">@lang('Privacy Policy')</flux:link></li>
             </ul>
         </div>
@@ -33,7 +36,7 @@
         <div>
             <flux:heading size="lg" class="mb-4">@lang('Subscribe')</flux:heading>
             <flux:text class="mb-4 text-sm">
-                @lang('Get the latest lottery news and updates sent straight to your inbox.')
+                @lang('Get the latest lottery news and updates sent straight to your inbox'):
             </flux:text>
             
             <form class="space-y-3" onsubmit="event.preventDefault();"> <flux:input placeholder="{{ __('Email address') }}" icon="envelope" />
