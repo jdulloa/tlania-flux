@@ -1,5 +1,5 @@
-<flux:header container class="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700 sticky top-0 z-50">
-    <flux:brand href="/" name="{{ config('app.name', 'RaffleLab') }}" class="max-w-[130px]">
+<flux:header container class="bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700 sticky top-0 z-50">
+    <flux:brand href="/" name="{{ config('app.name', 'tlania') }}" class="max-w-[130px]">
         </flux:brand>
 
     <flux:spacer />
@@ -70,7 +70,13 @@
                     <flux:navmenu.item href="/dashboard" icon="squares-2x2">@lang('Dashboard')</flux:navmenu.item>
                     <flux:navmenu.item href="/profile" icon="user">@lang('Profile')</flux:navmenu.item>
                     <flux:navmenu.separator />
-                    
+
+                    <flux:navmenu.item href="/add-balance" icon="credit-card">@lang('Add Balance')</flux:navmenu.item>
+                    <flux:navmenu.separator />
+
+                    <flux:navmenu.item href="/tickets" icon="ticket">@lang('My Tickets')</flux:navmenu.item>
+                    <flux:navmenu.separator />
+
                     <form method="POST" action="{{ route('logout') }}" class="w-full">
                         @csrf
                         <flux:navmenu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full text-red-500 hover:text-red-600">
