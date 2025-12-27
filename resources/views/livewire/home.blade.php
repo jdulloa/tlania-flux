@@ -17,7 +17,7 @@
     <flux:separator text="{{ __('Latest Winners') }}" class="my-12" />
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <flux:card class="bg-zinc-50 dark:bg-zinc-700">
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
             <div class="flex items-center gap-4">
                 <flux:avatar src="https://i.pravatar.cc/150?u=1" />
                 <div>
@@ -27,7 +27,7 @@
             </div>
         </flux:card>
 
-        <flux:card class="bg-zinc-50 dark:bg-zinc-700">
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
             <div class="flex items-center gap-4">
                 <flux:avatar src="https://i.pravatar.cc/150?u=2" />
                 <div>
@@ -37,7 +37,7 @@
             </div>
         </flux:card>
 
-        <flux:card class="bg-zinc-50 dark:bg-zinc-700">
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
             <div class="flex items-center gap-4">
                 <flux:avatar src="https://i.pravatar.cc/150?u=3" />
                 <div>
@@ -51,7 +51,7 @@
     <flux:separator text="{{ __('From the Blog') }}" class="my-12" />
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
             <div class="relative h-48 overflow-hidden">
                 <img src="https://picsum.photos/seed/lottery1/800/600" alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
             </div>
@@ -78,7 +78,7 @@
             </div>
         </flux:card>
 
-        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
             <div class="relative h-48 overflow-hidden">
                 <img src="https://picsum.photos/seed/lottery2/800/600" alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
             </div>
@@ -105,7 +105,7 @@
             </div>
         </flux:card>
 
-        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
             <div class="relative h-48 overflow-hidden">
                 <img src="https://picsum.photos/seed/lottery3/800/600" alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
             </div>
