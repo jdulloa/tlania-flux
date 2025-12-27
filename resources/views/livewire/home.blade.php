@@ -47,4 +47,89 @@
             </div>
         </flux:card>
     </div>
+
+    <flux:separator text="{{ __('From the Blog') }}" class="my-12" />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+            <div class="relative h-48 overflow-hidden">
+                <img src="https://picsum.photos/seed/lottery1/800/600" alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            </div>
+            
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-center justify-between mb-3">
+                    <flux:badge size="sm" color="zinc">Tips & Tricks</flux:badge>
+                    <span class="text-xs font-medium text-zinc-400">Oct 24, 2025</span>
+                </div>
+
+                <flux:heading size="lg" level="3" class="mb-2">
+                    Top 5 Strategies to Win Big
+                </flux:heading>
+
+                <flux:text class="line-clamp-3 mb-6 flex-1 text-zinc-500 dark:text-zinc-400">
+                    Discover the mathematical patterns and strategies that past winners have used to increase their odds of hitting the jackpot.
+                </flux:text>
+
+                <div class="mt-auto">
+                    <flux:button href="/blog/strategy-guide" variant="ghost" size="sm" icon-trailing="arrow-right" class="-ml-2">
+                        @lang('Read Article')
+                    </flux:button>
+                </div>
+            </div>
+        </flux:card>
+
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+            <div class="relative h-48 overflow-hidden">
+                <img src="https://picsum.photos/seed/lottery2/800/600" alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            </div>
+            
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-center justify-between mb-3">
+                    <flux:badge size="sm" color="indigo">Winners</flux:badge>
+                    <span class="text-xs font-medium text-zinc-400">Oct 20, 2025</span>
+                </div>
+
+                <flux:heading size="lg" level="3" class="mb-2">
+                    Meet the $10M Jackpot Winner
+                </flux:heading>
+
+                <flux:text class="line-clamp-3 mb-6 flex-1 text-zinc-500 dark:text-zinc-400">
+                    An exclusive interview with John Doe, our latest grand prize winner, on how he plans to spend his winnings.
+                </flux:text>
+
+                <div class="mt-auto">
+                    <flux:button href="/blog/winner-story" variant="ghost" size="sm" icon-trailing="arrow-right" class="-ml-2">
+                        @lang('Read Article')
+                    </flux:button>
+                </div>
+            </div>
+        </flux:card>
+
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors">
+            <div class="relative h-48 overflow-hidden">
+                <img src="https://picsum.photos/seed/lottery3/800/600" alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            </div>
+            
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-center justify-between mb-3">
+                    <flux:badge size="sm" color="emerald">News</flux:badge>
+                    <span class="text-xs font-medium text-zinc-400">Oct 15, 2025</span>
+                </div>
+
+                <flux:heading size="lg" level="3" class="mb-2">
+                    New Games Added This Week
+                </flux:heading>
+
+                <flux:text class="line-clamp-3 mb-6 flex-1 text-zinc-500 dark:text-zinc-400">
+                    We are excited to announce three new instant-win games with better odds and instant payouts. Check them out now!
+                </flux:text>
+
+                <div class="mt-auto">
+                    <flux:button href="/blog/new-games" variant="ghost" size="sm" icon-trailing="arrow-right" class="-ml-2">
+                        @lang('Read Article')
+                    </flux:button>
+                </div>
+            </div>
+        </flux:card>
+    </div>
 </div>
