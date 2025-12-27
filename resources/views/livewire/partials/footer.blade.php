@@ -1,14 +1,18 @@
 <flux:footer container class="mt-auto py-12 border-t border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        
         <div class="space-y-4">
             <flux:brand href="/" name="tlania" class="text-2xl" />
+            
             <flux:text class="text-zinc-500 dark:text-zinc-400">
-                {{ __(@$content->data_values->description) }}
+                @lang('The superlative lottery platform for everyone. Fair, transparent, and exciting.')
             </flux:text>
+            
             <div class="text-sm text-zinc-400">
                 &copy; {{ date('Y') }} {{ config('app.name') }}. <br> @lang('All rights reserved.')
             </div>
-            <div>
+
+            <div class="flex items-center gap-2">
                 <flux:button href="https://facebook.com" target="_blank" variant="ghost" class="size-10 !p-0 rounded-full text-zinc-400 hover:text-blue-600 dark:hover:text-blue-500" aria-label="Facebook">
                     <svg class="size-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
@@ -64,7 +68,8 @@
                 @lang('Get the latest lottery news and updates sent straight to your inbox'):
             </flux:text>
             
-            <form class="space-y-3" onsubmit="event.preventDefault();"> <flux:input placeholder="{{ __('Email address') }}" icon="envelope" />
+            <form class="space-y-3" onsubmit="event.preventDefault();">
+                <flux:input placeholder="{{ __('Email address') }}" icon="envelope" />
                 <flux:button variant="primary" type="submit" class="w-full">@lang('Subscribe')</flux:button>
             </form>
         </div>

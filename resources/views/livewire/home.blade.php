@@ -9,15 +9,15 @@
         </flux:subheading>
 
         <div class="flex justify-center gap-4">
-            <flux:button variant="primary" href="/lotteries">Play Now</flux:button>
-            <flux:button variant="ghost" href="/about">Learn More</flux:button>
+            <flux:button variant="primary" href="/lotteries">@lang('Play Now')</flux:button>
+            <flux:button variant="ghost" href="/about">@lang('Learn More')</flux:button>
         </div>
     </div>
 
-    <flux:separator text="Latest Winners" class="my-12" />
+    <flux:separator text="{{ __('Latest Winners') }}" class="my-12" />
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <flux:card>
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700">
             <div class="flex items-center gap-4">
                 <flux:avatar src="https://i.pravatar.cc/150?u=1" />
                 <div>
@@ -27,7 +27,7 @@
             </div>
         </flux:card>
 
-        <flux:card>
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700">
             <div class="flex items-center gap-4">
                 <flux:avatar src="https://i.pravatar.cc/150?u=2" />
                 <div>
@@ -37,7 +37,7 @@
             </div>
         </flux:card>
 
-        <flux:card>
+        <flux:card class="bg-zinc-50 dark:bg-zinc-700">
             <div class="flex items-center gap-4">
                 <flux:avatar src="https://i.pravatar.cc/150?u=3" />
                 <div>

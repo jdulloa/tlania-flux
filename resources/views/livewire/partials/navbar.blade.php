@@ -1,6 +1,5 @@
 <flux:header container class="bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700 sticky top-0 z-50">
-    <flux:brand href="/" name="{{ config('app.name', 'tlania') }}" class="max-w-[130px]">
-        </flux:brand>
+    <flux:brand href="/" name="{{ config('app.name', 'tlania') }}" class="max-w-[130px]" />
 
     <flux:spacer />
 
@@ -16,7 +15,7 @@
                 <flux:navmenu.item href="/faqs">@lang('FAQs')</flux:navmenu.item>
                 @auth
                     <flux:navmenu.item href="/support">@lang('Support Ticket')</flux:navmenu.item>
-                    @else
+                @else
                     <flux:navmenu.item href="/contact">@lang('Contact')</flux:navmenu.item>
                 @endauth
             </flux:navmenu>
@@ -26,22 +25,8 @@
     <flux:spacer />
 
     <div class="flex items-center gap-2">
-        <flux:button 
-            x-show="! $flux.dark" 
-            x-on:click="$flux.dark = true" 
-            icon="moon" 
-            variant="subtle" 
-            aria-label="{{ __('Dark Mode') }}" 
-        />
-
-        <flux:button 
-            x-show="$flux.dark" 
-            x-on:click="$flux.dark = false" 
-            icon="sun" 
-            variant="subtle" 
-            aria-label="{{ __('Light Mode') }}" 
-            x-cloak 
-        />
+        <flux:button x-show="! $flux.dark" x-on:click="$flux.dark = true" icon="moon" variant="subtle" aria-label="{{ __('Dark Mode') }}" />
+        <flux:button x-show="$flux.dark" x-on:click="$flux.dark = false" icon="sun" variant="subtle" aria-label="{{ __('Light Mode') }}" x-cloak />
 
         <flux:dropdown align="end">
             <flux:button variant="subtle" icon="language" icon-trailing="chevron-down">
@@ -72,8 +57,6 @@
                     <flux:navmenu.separator />
 
                     <flux:navmenu.item href="/add-balance" icon="credit-card">@lang('Add Balance')</flux:navmenu.item>
-                    <flux:navmenu.separator />
-
                     <flux:navmenu.item href="/tickets" icon="ticket">@lang('My Tickets')</flux:navmenu.item>
                     <flux:navmenu.separator />
 
