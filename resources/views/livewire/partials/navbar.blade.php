@@ -1,5 +1,5 @@
 <flux:header container class="bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-700 sticky top-0 z-50">
-    <flux:brand href="/" name="{{ config('app.name', 'tlania') }}" class="max-w-[130px]" />
+    <flux:brand href="/" name="tlania" class="max-w-[130px] font-brand text-2xl !font-normal"/>
 
     <flux:spacer />
 

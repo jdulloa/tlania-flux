@@ -2,8 +2,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
         
         <div class="space-y-4">
-            <flux:brand href="/" name="tlania" class="text-2xl" />
-            
+            <flux:brand href="/" name="tlania" class="text-2xl font-brand !font-normal"/>            
             <flux:text class="text-zinc-500 dark:text-zinc-400">
                 @lang('The superlative lottery platform for everyone. Fair, transparent, and exciting.')
             </flux:text>
