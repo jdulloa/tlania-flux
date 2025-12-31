@@ -114,6 +114,56 @@
         </div>
     </div>
 
+    <div class="pb-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <flux:heading size="xl" level="2" class="mb-4">How to Play & Win</flux:heading>
+            <flux:subheading>
+                Start playing your favorite global lotteries in 3 simple steps.
+            </flux:subheading>
+        </div>
+
+        <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            
+            <div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-zinc-200 dark:bg-zinc-700 -z-10"></div>
+
+            <div class="flex flex-col items-center space-y-4 p-4">
+                <div class="size-24 rounded-2xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shadow-sm">
+                    <flux:icon name="user-plus" variant="solid" class="size-10 text-indigo-600 dark:text-indigo-400" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">1. Create Account</flux:heading>
+                    <flux:text class="max-w-xs mx-auto">
+                        Sign up in seconds and deposit funds using your preferred secure payment method.
+                    </flux:text>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center space-y-4 p-4">
+                <div class="size-24 rounded-2xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shadow-sm">
+                    <flux:icon name="ticket" variant="solid" class="size-10 text-indigo-600 dark:text-indigo-400" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">2. Pick Your Numbers</flux:heading>
+                    <flux:text class="max-w-xs mx-auto">
+                        Select a lottery, choose your lucky numbers manually, or use "Quick Pick" for random digits.
+                    </flux:text>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center space-y-4 p-4">
+                <div class="size-24 rounded-2xl bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shadow-sm">
+                    <flux:icon name="trophy" variant="solid" class="size-10 text-indigo-600 dark:text-indigo-400" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">3. Win & Withdraw</flux:heading>
+                    <flux:text class="max-w-xs mx-auto">
+                        If you win, we notify you instantly. Prizes are credited to your balance for immediate withdrawal.
+                    </flux:text>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="py-12">
         <div class="text-center max-w-2xl mx-auto mb-12">
             <flux:heading size="xl" level="2" class="mb-4">Why Players Trust <span class="font-brand !font-normal text-lime-500 dark:text-lime-400">tlania</span></flux:heading>
