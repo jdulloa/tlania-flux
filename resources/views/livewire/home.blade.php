@@ -14,6 +14,106 @@
         </div>
     </div>
 
+    <div class="pb-12">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <flux:heading size="xl" level="2">Trending Lotteries</flux:heading>
+                <flux:subheading>The biggest jackpots happening right now.</flux:subheading>
+            </div>
+            <flux:button href="/lotteries" variant="ghost" icon-trailing="arrow-right" class="hidden sm:flex">
+                View All
+            </flux:button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <flux:card class="flex flex-col gap-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="flex justify-between items-start">
+                    <div class="flex items-center gap-3">
+                        <div class="size-12 rounded-full bg-red-100 flex items-center justify-center text-2xl">🇺🇸</div>
+                        <div>
+                            <flux:heading size="lg">Powerball</flux:heading>
+                            <span class="text-xs font-medium text-zinc-400">Next Draw: Today</span>
+                        </div>
+                    </div>
+                    <flux:badge color="red" size="sm" icon="fire">Hot</flux:badge>
+                </div>
+
+                <div class="py-2">
+                    <div class="text-sm text-zinc-500 dark:text-zinc-400 mb-1">Jackpot</div>
+                    <div class="text-3xl font-bold text-zinc-900 dark:text-white">$450,000,000</div>
+                </div>
+
+                <flux:separator variant="subtle" />
+
+                <div class="flex items-center justify-between mt-auto">
+                    <div class="flex flex-col">
+                        <span class="text-xs text-zinc-400">Time left</span>
+                        <span class="font-mono text-sm font-medium text-red-500">04:22:15</span>
+                    </div>
+                    <flux:button variant="primary" href="/lotteries/powerball">Play Now</flux:button>
+                </div>
+            </flux:card>
+
+            <flux:card class="flex flex-col gap-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="flex justify-between items-start">
+                    <div class="flex items-center gap-3">
+                        <div class="size-12 rounded-full bg-blue-100 flex items-center justify-center text-2xl">🇪🇺</div>
+                        <div>
+                            <flux:heading size="lg">EuroMillions</flux:heading>
+                            <span class="text-xs font-medium text-zinc-400">Next Draw: Tomorrow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-2">
+                    <div class="text-sm text-zinc-500 dark:text-zinc-400 mb-1">Jackpot</div>
+                    <div class="text-3xl font-bold text-zinc-900 dark:text-white">€130,000,000</div>
+                </div>
+
+                <flux:separator variant="subtle" />
+
+                <div class="flex items-center justify-between mt-auto">
+                    <div class="flex flex-col">
+                        <span class="text-xs text-zinc-400">Time left</span>
+                        <span class="font-mono text-sm font-medium text-lime-500 dark:text-lime-400">1d 12:00:00</span>
+                    </div>
+                    <flux:button variant="primary" href="/lotteries/euromillions">Play Now</flux:button>
+                </div>
+            </flux:card>
+
+            <flux:card class="flex flex-col gap-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="flex justify-between items-start">
+                    <div class="flex items-center gap-3">
+                        <div class="size-12 rounded-full bg-green-100 flex items-center justify-center text-2xl">🇮🇹</div>
+                        <div>
+                            <flux:heading size="lg">SuperEnalotto</flux:heading>
+                            <span class="text-xs font-medium text-zinc-400">Next Draw: Friday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-2">
+                    <div class="text-sm text-zinc-500 dark:text-zinc-400 mb-1">Jackpot</div>
+                    <div class="text-3xl font-bold text-zinc-900 dark:text-white">€85,000,000</div>
+                </div>
+
+                <flux:separator variant="subtle" />
+
+                <div class="flex items-center justify-between mt-auto">
+                    <div class="flex flex-col">
+                        <span class="text-xs text-zinc-400">Time left</span>
+                        <span class="font-mono text-sm font-medium text-lime-500 dark:text-lime-400">2d 08:30:00</span>
+                    </div>
+                    <flux:button variant="primary" href="/lotteries/superenalotto">Play Now</flux:button>
+                </div>
+            </flux:card>
+        </div>
+        
+        <div class="mt-6 sm:hidden">
+            <flux:button href="/lotteries" variant="ghost" class="w-full justify-center">View All Lotteries</flux:button>
+        </div>
+    </div>
+
     <div class="py-12">
         <div class="text-center max-w-2xl mx-auto mb-12">
             <flux:heading size="xl" level="2" class="mb-4">Why Players Trust <span class="font-brand !font-normal text-lime-500 dark:text-lime-400">tlania</span></flux:heading>
