@@ -14,6 +14,91 @@
         </div>
     </div>
 
+    <div class="py-12">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <flux:heading size="xl" level="2" class="mb-4">Why Players Trust <span class="font-brand !font-normal text-lime-500 dark:text-lime-400">tlania</span></flux:heading>
+            <flux:subheading>
+                Experience the most transparent and secure lottery platform, designed for players worldwide.
+            </flux:subheading>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <flux:card class="space-y-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="size-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                    <flux:icon name="globe-alt" variant="mini" class="size-6" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">Play from Anywhere</flux:heading>
+                    <flux:text>
+                        No matter where you are, access top-tier lotteries. Our platform is optimized for global access on any device.
+                    </flux:text>
+                </div>
+            </flux:card>
+
+            <flux:card class="space-y-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="size-10 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+                    <flux:icon name="shield-check" variant="mini" class="size-6" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">Secure & Flexible Banking</flux:heading>
+                    <flux:text>
+                        Deposit and withdraw with confidence. We support multiple payment methods with bank-grade security encryption.
+                    </flux:text>
+                </div>
+            </flux:card>
+
+            <flux:card class="space-y-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="size-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                    <flux:icon name="scale" variant="mini" class="size-6" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">Provably Fair Draws</flux:heading>
+                    <flux:text>
+                        Winners are selected using <a href="https://www.random.org" target="_blank" class="underline decoration-zinc-300 underline-offset-2">Random.org</a> or real-world lottery data, ensuring 100% unbiased results.
+                    </flux:text>
+                </div>
+            </flux:card>
+
+            <flux:card class="space-y-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="size-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 dark:text-amber-400">
+                    <flux:icon name="users" variant="mini" class="size-6" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">Total Transparency</flux:heading>
+                    <flux:text>
+                        See exactly who bought tickets before the draw begins. Verify every entry and every winner on our public ledger.
+                    </flux:text>
+                </div>
+            </flux:card>
+
+            <flux:card class="space-y-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="size-10 rounded-lg bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400">
+                    <flux:icon name="bell" variant="mini" class="size-6" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">Instant Alerts</flux:heading>
+                    <flux:text>
+                        Never miss a win. Get instant notifications via email and in-app alerts for draw results, wins, and promotions.
+                    </flux:text>
+                </div>
+            </flux:card>
+
+            <flux:card class="space-y-4 bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
+                <div class="size-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                    <flux:icon name="chart-bar" variant="mini" class="size-6" />
+                </div>
+                <div>
+                    <flux:heading size="lg" class="mb-2">Advanced User Metrics</flux:heading>
+                    <flux:text>
+                        Track your performance with public profiles showing ticket history, winning stats, and participation milestones.
+                    </flux:text>
+                </div>
+            </flux:card>
+
+        </div>
+    </div>
+
     <flux:separator text="{{ __('Latest Winners') }}" class="my-12" />
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
