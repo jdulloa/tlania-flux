@@ -164,7 +164,15 @@
         </div>
     </div>
 
-    <flux:separator text="{{ __('Latest Winners') }}" class="my-12" />
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <flux:heading size="xl" level="2">{{ __('Latest Winners') }}</flux:heading>
+            <flux:subheading>These are our winners, and you could be one too.</flux:subheading>
+        </div>
+        <flux:button href="/winners" variant="ghost" icon-trailing="arrow-right" class="hidden sm:flex">
+            View All
+        </flux:button>
+    </div>
 
     <div class="pb-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -285,8 +293,16 @@
         </div>
     </div>
     
-    <flux:separator text="{{ __('From the Blog') }}" class="my-12" />
-
+    <div class="flex items-center justify-between mb-8">
+        <div>
+            <flux:heading size="xl" level="2">{{ __('From the Blog') }}</flux:heading>
+            <flux:subheading>The best tips to help you win big and the latest news from the world of lotteries.</flux:subheading>
+        </div>
+        <flux:button href="/blog" variant="ghost" icon-trailing="arrow-right" class="hidden sm:flex">
+            View All
+        </flux:button>
+    </div>
+    
     <div class="pb-12"> 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
