@@ -157,24 +157,24 @@
                 <div>
                     <flux:heading size="lg" class="mb-2">3. @lang('Win & Withdraw')</flux:heading>
                     <flux:text class="max-w-xs mx-auto">
-                        @lang('If you win, we'll notify you instantly and credit the winnings to your balance for withdrawal').
+                        @lang('If you win, we\'ll notify you instantly and credit the winnings to your balance for withdrawal').
                     </flux:text>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="flex items-center justify-between mb-8">
-        <div>
-            <flux:heading size="xl" level="2">{{ __('Latest Winners') }}</flux:heading>
-            <flux:subheading>@lang('Real people, real prizes'). <span class="text-indigo-600 dark:text-indigo-400 font-medium">@lang('You could be next')</span>.</flux:subheading>
-        </div>
-        <flux:button href="/winners" variant="ghost" icon-trailing="arrow-right" class="hidden sm:flex">
-            @lang('View All')
-        </flux:button>
-    </div>
-
     <div class="pb-12">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <flux:heading size="xl" level="2">{{ __('Latest Winners') }}</flux:heading>
+                <flux:subheading>@lang('Real people, real prizes'). <span class="text-lime-500 dark:text-lime-400 font-medium">@lang('You could be next')</span>.</flux:subheading>
+            </div>
+            <flux:button href="/winners" variant="ghost" icon-trailing="arrow-right" class="hidden sm:flex">
+                @lang('View All')
+            </flux:button>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <flux:card class="bg-zinc-50 dark:bg-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
                 <div class="flex items-center gap-4">
@@ -205,6 +205,10 @@
                     </div>
                 </div>
             </flux:card>
+        </div>
+                
+        <div class="mt-6 sm:hidden">
+            <flux:button href="/winners" variant="ghost" class="w-full justify-center">@lang('View All')</flux:button>
         </div>
     </div>
     
@@ -292,18 +296,18 @@
 
         </div>
     </div>
-    
-    <div class="flex items-center justify-between mb-8">
-        <div>
-            <flux:heading size="xl" level="2">{{ __('From the Blog') }}</flux:heading>
-            <flux:subheading>@lang('The best tips to help you win big and the latest news from the world of lotteries').</flux:subheading>
-        </div>
-        <flux:button href="/blog" variant="ghost" icon-trailing="arrow-right" class="hidden sm:flex">
-            @lang('View All')
-        </flux:button>
-    </div>
-    
+
     <div class="pb-12"> 
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <flux:heading size="xl" level="2">{{ __('From the Blog') }}</flux:heading>
+                <flux:subheading>@lang('The best tips to help you win big and the latest news from the world of lotteries').</flux:subheading>
+            </div>
+            <flux:button href="/blog" variant="ghost" icon-trailing="arrow-right" class="hidden sm:flex">
+                @lang('View All')
+            </flux:button>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <flux:card class="bg-zinc-50 dark:bg-zinc-700 !p-0 overflow-hidden flex flex-col h-full hover:border-zinc-300 dark:hover:border-zinc-500 transition-colors">
                 <div class="relative h-48 overflow-hidden">
@@ -385,6 +389,10 @@
                     </div>
                 </div>
             </flux:card>
+        </div>
+  
+        <div class="mt-6 sm:hidden">
+            <flux:button href="/blog" variant="ghost" class="w-full justify-center">@lang('View All')</flux:button>
         </div>
     </div>
 </div>
