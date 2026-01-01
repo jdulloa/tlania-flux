@@ -145,7 +145,7 @@
                 <div>
                     <flux:heading size="lg" class="mb-2">2. @lang('Pick Your Numbers')</flux:heading>
                     <flux:text class="max-w-xs mx-auto">
-                        @lang('Select a lottery, choose your lucky numbers manually, or use \"Quick Pick\" for random numbers').
+                        @lang('Select a lottery, choose your lucky numbers manually, or use "Quick Pick" for random numbers').
                     </flux:text>
                 </div>
             </div>
@@ -301,7 +301,7 @@
         <div class="flex items-center justify-between mb-8">
             <div>
                 <flux:heading size="xl" level="2">{{ __('From the Blog') }}</flux:heading>
-                <flux:subheading>@lang('The best tips to help you win big and the latest news from the world of lotteries').</flux:subheading>
+                <flux:subheading>@lang('Winning strategies and breaking news from the lottery world').</flux:subheading>
             </div>
             <flux:button href="/blog" variant="ghost" icon-trailing="arrow-right" class="hidden sm:flex">
                 @lang('View All')
